@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container-fluid min-vh-100 py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                    <!-- Header -->
+                    <div class="header text-center">
+                        <h1 class="mb-3">
+                            <i class="bi bi-qr-code"></i>
+                            QR Code Generator
+                        </h1>
+                        <p class="mb-0 header-subtitle">Create beautiful QR codes for text, URLs, or any data with ease</p>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="card-body p-4">
+                        <form id="qrForm" action="/generate" method="POST">
+                            <div class="mb-4">
+                                <label for="text" class="form-label fw-medium">Enter text or URL:</label>
+                                <textarea 
+                                    id="text" 
+                                    name="text" 
+                                    class="form-control form-control-lg rounded-3 custom-textarea" 
+                                    placeholder="Example: https://www.google.com or any text..."
+                                    rows="4"
+                                    required
+                                ><%= text %></textarea>
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-3 px-4 me-md-2">
+                                    <i class="bi bi-magic"></i>
+                                    Generate QR Code
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg rounded-3 px-4" onclick="clearForm()">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                    Clear
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Error Message -->
+                    <% if (typeof error !== 'undefined' && error) { %>
+                        <div class="alert alert-danger mx-4 mb-4 rounded-3" role="alert">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                            <%= error %>
+                        </div>
+                    <% } %>
+
+                    <!-- Result -->
+                    <% if (qrCode) { %>
+                        <div class="result-section">
+                            <div class="text-center mb-4">
+                                <h4 class="text-success mb-3">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    QR Code generated successfully!
+                                </h4>
+                                
+                                <div class="qr-display-container mb-4">
+                                    <div class="qr-display">
+                                        <img src="<%= qrCode %>" alt="QR Code" id="qrImage" class="img-fluid">
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-4">
+                                    <button class="btn btn-success btn-lg rounded-3 px-4 me-md-2" onclick="downloadQR()">
+                                        <i class="bi bi-download"></i>
+                                        Download
+                                    </button>
+                                    <button class="btn btn-info btn-lg rounded-3 px-4" onclick="copyToClipboard()">
+                                        <i class="bi bi-clipboard"></i>
+                                        Copy Image
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="qr-info">
+                                <div class="card bg-light border-0">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-2">
+                                            <i class="bi bi-info-circle"></i>
+                                            Generated Data:
+                                        </h6>
+                                        <p class="card-text text-muted small"><%= text %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
