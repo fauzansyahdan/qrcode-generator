@@ -43,11 +43,11 @@ QR Code Generator adalah aplikasi berbasis web yang memungkinkan pengguna untuk 
    node app.js
 
 ## 🛠️ Cara Menggunakan
-Masukkan teks atau URL pada form yang tersedia
+   1. Masukkan teks atau URL pada form yang tersedia
 
-Klik tombol Generate QR Code
+   2. Klik tombol Generate QR Code
 
-QR Code akan tampil di bawah form
+   3. QR Code akan tampil di bawah form
 
 (Opsional) Klik kanan untuk menyimpan QR code sebagai gambar
 
