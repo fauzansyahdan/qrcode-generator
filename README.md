@@ -4,7 +4,7 @@ QR Code Generator adalah aplikasi berbasis web yang memungkinkan pengguna untuk 
 
 ## 🖼️ Preview
 
-[QR Code Generator UI]./<img width="858" height="605" alt="image" src="https://github.com/user-attachments/assets/4f34fa87-fb34-4a4a-8b06-ab99e5fd29ca" />
+[QR Code Generator UI]<img width="858" height="605" alt="image" src="https://github.com/user-attachments/assets/4f34fa87-fb34-4a4a-8b06-ab99e5fd29ca" />
 
 
 > Tampilan antarmuka yang sederhana dan responsif, memudahkan pengguna dalam membuat QR code.
