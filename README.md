@@ -39,15 +39,12 @@ git clone https://github.com/fauzansyahdan/qr-code-generator.git
 cd qr-code-generator
 
 2. Install dependencies:
-##
+   npm install
 
-npm install
+4. Jalankan Aplikasi:
+   node app.js
 
-3. Jalankan Aplikasi:
-##
-node app.js
-
-🛠️ Cara Menggunakan
+##🛠️ Cara Menggunakan
 Masukkan teks atau URL pada form yang tersedia
 
 Klik tombol Generate QR Code
