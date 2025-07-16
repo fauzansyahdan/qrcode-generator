@@ -4,7 +4,8 @@ QR Code Generator adalah aplikasi berbasis web yang memungkinkan pengguna untuk 
 
 ## 🖼️ Preview
 
-![QR Code Generator UI](./path-to-your-screenshot.png)
+![QR Code Generator UI](./<img width="858" height="605" alt="image" src="https://github.com/user-attachments/assets/4f34fa87-fb34-4a4a-8b06-ab99e5fd29ca" />
+)
 
 > Tampilan antarmuka yang sederhana dan responsif, memudahkan pengguna dalam membuat QR code.
 
@@ -32,7 +33,26 @@ QR Code Generator adalah aplikasi berbasis web yang memungkinkan pengguna untuk 
 ## 📦 Instalasi
 
 1. Clone repositori:
+## 
 
-```bash
 git clone https://github.com/fauzansyahdan/qr-code-generator.git
 cd qr-code-generator
+
+2. Install dependencies:
+##
+
+npm install
+
+3. Jalankan Aplikasi:
+##
+node app.js
+
+🛠️ Cara Menggunakan
+Masukkan teks atau URL pada form yang tersedia
+
+Klik tombol Generate QR Code
+
+QR Code akan tampil di bawah form
+
+(Opsional) Klik kanan untuk menyimpan QR code sebagai gambar
+
