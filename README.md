@@ -33,18 +33,16 @@ QR Code Generator adalah aplikasi berbasis web yang memungkinkan pengguna untuk 
 ## 📦 Instalasi
 
 1. Clone repositori:
-## 
+   git clone https://github.com/fauzansyahdan/qr-code-generator.git
+   cd qr-code-generator
 
-git clone https://github.com/fauzansyahdan/qr-code-generator.git
-cd qr-code-generator
-
-2. Install dependencies:
+3. Install dependencies:
    npm install
 
 4. Jalankan Aplikasi:
    node app.js
 
-##🛠️ Cara Menggunakan
+## 🛠️ Cara Menggunakan
 Masukkan teks atau URL pada form yang tersedia
 
 Klik tombol Generate QR Code
